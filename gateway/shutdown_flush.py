@@ -190,7 +190,7 @@ def spool_dropped_transcript_message(
 _TRANSCRIPT_SPOOL_SEQ = itertools.count()
 
 
-def drain_transcript_spool(session_id: str, replay) -> tuple[int, int]:
+def drain_transcript_spool(session_id: str, replay) -> tuple[int, Optional[int]]:
     """Replay cap-dropped transcript messages spooled for *session_id*.
 
     ``replay(message_dict)`` is invoked for each spooled message in drop
@@ -199,14 +199,16 @@ def drain_transcript_spool(session_id: str, replay) -> tuple[int, int]:
     for the next attempt (the DB is likely still unhealthy).
 
     Returns ``(replayed, remaining)`` — messages replayed and spool files
-    left behind for a later retry.
+    left behind for a later retry. ``remaining`` is ``None`` when the spool
+    cannot be scanned, so callers cannot mistake an unknown state for an empty
+    spool.
     """
     try:
         flush_dir = _get_flush_dir()
         candidates = list(flush_dir.glob("pending-*.json"))
     except Exception as exc:
         logger.debug("Cannot scan transcript spool: %s", exc)
-        return 0, 0
+        return 0, None
 
     entries = []
     for path in candidates:
