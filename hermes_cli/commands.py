@@ -18,6 +18,7 @@ import subprocess
 import time
 from collections.abc import Callable, Mapping
 from dataclasses import dataclass, field
+from pathlib import Path
 from typing import Any
 
 from utils import is_truthy_value
@@ -858,6 +859,15 @@ _clamp_telegram_names = _clamp_command_names
 # Shared skill/plugin collection for gateway platforms
 # ---------------------------------------------------------------------------
 
+def _path_is_within(candidate: Path, root: Path) -> bool:
+    """Return whether resolved *candidate* is inside resolved *root*."""
+    try:
+        candidate.relative_to(root)
+    except ValueError:
+        return False
+    return True
+
+
 def _collect_gateway_skill_entries(
     platform: str,
     max_slots: int,
@@ -930,17 +940,17 @@ def _collect_gateway_skill_entries(
         from agent.skill_commands import get_skill_commands
         from tools.skills_tool import SKILLS_DIR
         from agent.skill_utils import get_external_skills_dirs
-        _skills_dir = str(SKILLS_DIR.resolve())
-        _hub_dir = str((SKILLS_DIR / ".hub").resolve()).rstrip("/") + "/"
-        # Build set of allowed directory prefixes: local skills dir + any
-        # user-configured ``skills.external_dirs``. Ensure each prefix ends
-        # with ``/`` so ``/my-skills`` does not also match ``/my-skills-extra``.
+        _skills_dir = SKILLS_DIR.resolve()
+        _hub_dir = (SKILLS_DIR / ".hub").resolve()
+        # Build the allowed roots from the local skills dir plus any
+        # user-configured ``skills.external_dirs``. Path containment keeps
+        # native Windows separators working and rejects prefix-only siblings.
         # Without this widening, external skills are visible in
         # ``hermes skills list`` and the agent's ``/skill-name`` dispatch but
         # silently excluded from gateway slash menus (#8110).
-        _allowed_prefixes = [_skills_dir.rstrip("/") + "/"]
-        _allowed_prefixes.extend(
-            str(d).rstrip("/") + "/" for d in get_external_skills_dirs()
+        _allowed_roots = [_skills_dir]
+        _allowed_roots.extend(
+            Path(d).resolve() for d in get_external_skills_dirs()
         )
         skill_cmds = get_skill_commands()
         for cmd_key in sorted(skill_cmds):
@@ -948,9 +958,13 @@ def _collect_gateway_skill_entries(
             skill_path = info.get("skill_md_path", "")
             if not skill_path:
                 continue
-            if not any(skill_path.startswith(prefix) for prefix in _allowed_prefixes):
+            resolved_skill_path = Path(skill_path).resolve()
+            if not any(
+                _path_is_within(resolved_skill_path, root)
+                for root in _allowed_roots
+            ):
                 continue
-            if skill_path.startswith(_hub_dir):
+            if _path_is_within(resolved_skill_path, _hub_dir):
                 continue
             skill_name = info.get("name", "")
             if skill_name in _platform_disabled:
@@ -1087,8 +1101,6 @@ def discord_skill_commands_by_category(
         - *hidden_count*: skills dropped due to name clamp collisions
           against already-registered command names.
     """
-    from pathlib import Path as _P
-
     _platform_disabled: set[str] = set()
     try:
         from agent.skill_utils import get_disabled_skill_names
@@ -1117,11 +1129,11 @@ def discord_skill_commands_by_category(
         # Build list of (resolved_root, is_local) tuples. Each external dir
         # becomes its own scan root for category derivation — a skill at
         # ``<external>/mlops/foo/SKILL.md`` is still categorized as "mlops".
-        _scan_roots: list[_P] = [_skills_dir]
+        _scan_roots: list[Path] = [_skills_dir]
         try:
             for ext in get_external_skills_dirs():
                 try:
-                    _scan_roots.append(_P(ext).resolve())
+                    _scan_roots.append(Path(ext).resolve())
                 except Exception:
                     continue
         except Exception:
@@ -1133,18 +1145,16 @@ def discord_skill_commands_by_category(
             skill_path = info.get("skill_md_path", "")
             if not skill_path:
                 continue
-            sp = _P(skill_path).resolve()
+            sp = Path(skill_path).resolve()
             # Hub skills are loaded via the skill hub, not surfaced as
             # slash commands.
-            if str(sp).startswith(str(_hub_dir)):
+            if _path_is_within(sp, _hub_dir):
                 continue
             # Accept skill if it lives under any scan root; record the
             # matching root so we can derive the category correctly.
-            matched_root: _P | None = None
+            matched_root: Path | None = None
             for root in _scan_roots:
-                try:
-                    sp.relative_to(root)
-                except ValueError:
+                if not _path_is_within(sp, root):
                     continue
                 matched_root = root
                 break
