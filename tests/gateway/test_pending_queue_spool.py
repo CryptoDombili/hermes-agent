@@ -307,6 +307,58 @@ class TestSpoolOnDrop:
         ]
         assert _spool_files(spool_home) == []
 
+    def test_spool_scan_failure_blocks_newer_live_rows(
+        self, spool_home, monkeypatch
+    ):
+        """An unknown spool state must fail closed until it can be scanned."""
+        monkeypatch.setattr(SessionStore, "_MAX_PENDING_PER_SESSION", 2)
+        db = BrokenThenHealedDb()
+        store = _make_store(db)
+
+        for i in range(3):
+            store.append_to_transcript(
+                "sess-scan", {"role": "user", "content": f"m{i}"}
+            )
+
+        assert len(_spool_files(spool_home)) == 1
+        assert "sess-scan" in store._spooled_drop_sessions
+
+        original_get_flush_dir = shutdown_flush._get_flush_dir
+
+        def _scan_boom():
+            raise OSError("controlled spool scan failure")
+
+        monkeypatch.setattr(shutdown_flush, "_get_flush_dir", _scan_boom)
+        # Avoid another cap eviction so this test isolates drain-time scanning.
+        monkeypatch.setattr(SessionStore, "_MAX_PENDING_PER_SESSION", 10)
+        db.broken = False
+        store.append_to_transcript(
+            "sess-scan", {"role": "assistant", "content": "newer"}
+        )
+
+        assert db.rows == []
+        assert [
+            message["content"]
+            for message in store._dirty_transcripts["sess-scan"]
+        ] == ["m1", "m2", "newer"]
+        assert "sess-scan" in store._spooled_drop_sessions
+
+        monkeypatch.setattr(
+            shutdown_flush, "_get_flush_dir", original_get_flush_dir
+        )
+        store.append_to_transcript(
+            "sess-scan", {"role": "assistant", "content": "finish"}
+        )
+
+        assert [row["content"] for row in db.rows] == [
+            "m0",
+            "m1",
+            "m2",
+            "newer",
+            "finish",
+        ]
+        assert _spool_files(spool_home) == []
+
 
 class TestSpoolPrimitives:
     def test_drain_skips_other_reasons(self, spool_home):
