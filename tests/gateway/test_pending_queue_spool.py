@@ -14,6 +14,7 @@ import pytest
 
 from gateway import shutdown_flush
 from gateway.session import SessionStore
+from hermes_state import SessionDB
 
 
 def _make_store(db):
@@ -98,17 +99,103 @@ class TestSpoolOnDrop:
         )
 
         contents = [r["content"] for r in db.rows]
-        # All surviving in-memory messages plus the recovery trigger...
-        for i in range(n_extra, SessionStore._MAX_PENDING_PER_SESSION + n_extra):
-            assert f"msg{i}" in contents
-        assert "recovered" in contents
-        # ...and the previously dropped messages, replayed in drop order.
-        replayed = [c for c in contents if c in ("msg0", "msg1", "msg2")]
-        assert replayed == ["msg0", "msg1", "msg2"]
+        # The durable transcript must preserve the original chronology.  The
+        # spooled rows are older than every row still in memory, so replaying
+        # them after the live queue would permanently scramble insertion order.
+        assert contents == [
+            *(f"msg{i}" for i in range(SessionStore._MAX_PENDING_PER_SESSION + n_extra)),
+            "recovered",
+        ]
         # Spool files consumed after successful replay.
         assert _spool_files(spool_home) == []
         # Nothing pending in memory.
         assert "sess-1" not in store._dirty_transcripts
+
+    def test_tool_result_keeps_order_after_database_reopen(
+        self, spool_home, monkeypatch
+    ):
+        """A successful side-effect result must survive model replay.
+
+        ``SessionDB`` restores rows by AUTOINCREMENT id, not timestamp.  If
+        the live queue lands before its older spool, alternation repair drops
+        the now-leading tool result as an orphan and leaves its non-idempotent
+        tool call without the success receipt.
+        """
+        monkeypatch.setattr(SessionStore, "_MAX_PENDING_PER_SESSION", 2)
+        db_path = spool_home / "state.db"
+        db = SessionDB(db_path=db_path)
+        db.create_session("tool-order", "telegram")
+
+        class BrokenProxy:
+            def __init__(self, wrapped):
+                self.wrapped = wrapped
+                self.broken = True
+
+            def append_message(self, **kwargs):
+                if self.broken:
+                    raise RuntimeError("controlled database outage")
+                return self.wrapped.append_message(**kwargs)
+
+            def __getattr__(self, name):
+                return getattr(self.wrapped, name)
+
+        proxy = BrokenProxy(db)
+        store = _make_store(proxy)
+        original = [
+            {"role": "user", "content": "send the payment"},
+            {
+                "role": "assistant",
+                "content": "",
+                "tool_calls": [
+                    {
+                        "id": "call-pay-1",
+                        "type": "function",
+                        "function": {
+                            "name": "send_payment",
+                            "arguments": '{"amount": 10}',
+                        },
+                    }
+                ],
+            },
+            {
+                "role": "tool",
+                "tool_call_id": "call-pay-1",
+                "name": "send_payment",
+                "content": "payment sent: receipt-1",
+            },
+        ]
+        for message in original:
+            store.append_to_transcript("tool-order", message)
+
+        proxy.broken = False
+        store.append_to_transcript(
+            "tool-order", {"role": "assistant", "content": "Payment sent."}
+        )
+        db.close()
+
+        reopened = SessionDB(db_path=db_path)
+        try:
+            raw = reopened.get_messages_as_conversation(
+                "tool-order", repair_alternation=False
+            )
+            replay = reopened.get_messages_as_conversation(
+                "tool-order", repair_alternation=True
+            )
+        finally:
+            reopened.close()
+
+        assert [message["role"] for message in raw] == [
+            "user",
+            "assistant",
+            "tool",
+            "assistant",
+        ]
+        assert any(
+            message.get("role") == "tool"
+            and message.get("tool_call_id") == "call-pay-1"
+            and message.get("content") == "payment sent: receipt-1"
+            for message in replay
+        )
 
     def test_drain_only_touches_own_session(self, spool_home, monkeypatch):
         monkeypatch.setattr(SessionStore, "_MAX_PENDING_PER_SESSION", 3)
@@ -180,8 +267,10 @@ class TestSpoolOnDrop:
 
         # DB heals only for live writes; replayed (spooled) rows still fail.
         class FlakyDb(BrokenThenHealedDb):
+            reject_replays = True
+
             def append_message(self, **kwargs):
-                if kwargs["content"] in ("m0", "m1", "m2"):
+                if self.reject_replays and kwargs["content"] in ("m0", "m1", "m2"):
                     raise RuntimeError("still broken for replays")
                 self.rows.append(kwargs)
 
@@ -195,6 +284,28 @@ class TestSpoolOnDrop:
         # Spool files survive the failed replay for the next attempt.
         assert len(_spool_files(spool_home)) == 3
         assert "sess-r" in getattr(store, "_spooled_drop_sessions", set())
+        # Newer live rows must not jump ahead while an older replay is blocked.
+        assert flaky.rows == []
+        assert [m["content"] for m in store._dirty_transcripts["sess-r"]] == [
+            "m3",
+            "m4",
+            "go",
+        ]
+
+        flaky.reject_replays = False
+        store.append_to_transcript(
+            "sess-r", {"role": "user", "content": "finish"}
+        )
+        assert [row["content"] for row in flaky.rows] == [
+            "m0",
+            "m1",
+            "m2",
+            "m3",
+            "m4",
+            "go",
+            "finish",
+        ]
+        assert _spool_files(spool_home) == []
 
 
 class TestSpoolPrimitives:
