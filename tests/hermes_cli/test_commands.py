@@ -394,4 +394,790 @@ class TestSubcommands:
         assert "/clear" not in SUBCOMMANDS
 
 
-# â”€â”€ Subcommand tab completion â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ç~6¶‰žËkºwµçQ¡”É•¹…µ•½¹ÍÑ…¹ÑÌ½™Õ¹Ñ¥½¹ÌÍÑ¥±°•á¥ÍÐÕ¹‘•ÈÑ¡”½±¹…µ•Ì¸ˆˆˆ4(4(€€€‘•˜Ñ•ÍÑ}Ñ}¹…µ•}±¥µ¥Ñ}…±¥…Ì¡Í•±˜¤è4(€€€€€€€…ÍÍ•ÉÐ}Q}95}1%5%P€ôô}5}95}1%5%P€ôô€ÌÈ4(4(€€€‘•˜Ñ•ÍÑ}±…µÁ}Ñ•±•É…µ}¹…µ•Í}¥Í}±…µÁ}½µµ…¹‘}¹…µ•Ì¡Í•±˜¤è4(€€€€€€€…ÍÍ•ÉÐ}±…µÁ}Ñ•±•É…µ}¹…µ•Ì¥Ì}±…µÁ}½µµ…¹‘}¹…µ•Ì4(4(4(Œ€´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´4(Œ¥Í½ÉÍ­¥±°½µµ…¹É•¥ÍÑÉ…Ñ¥½¸4(Œ€´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´4(4)±…ÍÌQ•ÍÑ¥Í½É‘M­¥±±½µµ…¹‘Ìè4(€€€€ˆˆ‰Q•ÍÑÌ™½È‘¥Í½É‘}Í­¥±±}½µµ…¹‘Ì ¤ƒŠP•¹ÑÉ…±¥é•Í­¥±°É•¥ÍÑÉ…Ñ¥½¸¸ˆˆˆ4(4(4(€€€ÁåÑ•ÍÐ¹µ…É¬¹Ý¥¹‘½ÝÍ}½¹±ä(€€€‘•˜Ñ•ÍÑ}¹…Ñ¥Ù•}Ý¥¹‘½ÝÍ}Á…Ñ¡Í}¥¹±Õ‘•}±½…±}…¹‘}•áÑ•É¹…±}Í­¥±±Ì (€€€€€€€Í•±˜°ÑµÁ}Á…Ñ °µ½¹­•åÁ…Ñ °(€€€€¤è(€€€€€€€€ˆˆ‰	…­Í±…Í µ¹…Ñ¥Ù”Í­¥±°Á…Ñ¡ÌÉ•µ…¥¸Ù¥Í¥‰±”¥¸Ñ¡”™±…Ð½±±•Ñ½È¸ˆˆˆ(€€€€€€€™É½´Õ¹¥ÑÑ•ÍÐ¹µ½¬¥µÁ½ÉÐÁ…Ñ ((€€€€€€€±½…±}‘¥È€ôÑµÁ}Á…Ñ €¼€‰Í­¥±±Ìˆ(€€€€€€€•áÑ•É¹…±}‘¥È€ôÑµÁ}Á…Ñ €¼€‰•áÑ•É¹…°µÍ­¥±±Ìˆ(€€€€€€€±½½­…±¥­•}‘¥È€ôÑµÁ}Á…Ñ €¼€‰•áÑ•É¹…°µÍ­¥±±Ìµ‰…­ÕÀˆ(€€€€€€€±½…±}‘¥È¹µ­‘¥È ¤(€€€€€€€•áÑ•É¹…±}‘¥È¹µ­‘¥È ¤(€€€€€€€±½½­…±¥­•}‘¥È¹µ­‘¥È ¤(€€€€€€€™…­•}µ‘Ì€ôì(€€€€€€€€€€€€ˆ½±½…°µÍ­¥±°ˆèì(€€€€€€€€€€€€€€€€‰¹…µ”ˆè€‰±½…°µÍ­¥±°ˆ°(€€€€€€€€€€€€€€€€‰‘•ÍÉ¥ÁÑ¥½¸ˆè€‰1½…°ˆ°(€€€€€€€€€€€€€€€€‰Í­¥±±}µ‘}Á…Ñ ˆèÍÑÈ¡±½…±}‘¥È€¼€‰±½…°µÍ­¥±°ˆ€¼€‰M-%10¹µˆ¤°(€€€€€€€€€€€ô°(€€€€€€€€€€€€ˆ½•áÑ•É¹…°µÍ­¥±°ˆèì(€€€€€€€€€€€€€€€€‰¹…µ”ˆè€‰•áÑ•É¹…°µÍ­¥±°ˆ°(€€€€€€€€€€€€€€€€‰‘•ÍÉ¥ÁÑ¥½¸ˆè€‰áÑ•É¹…°ˆ°(€€€€€€€€€€€€€€€€‰Í­¥±±}µ‘}Á…Ñ ˆèÍÑÈ¡•áÑ•É¹…±}‘¥È€¼€‰•áÑ•É¹…°µÍ­¥±°ˆ€¼€‰M-%10¹µˆ¤°(€€€€€€€€€€€ô°(€€€€€€€€€€€€ˆ½±½½­…±¥­”µÍ­¥±°ˆèì(€€€€€€€€€€€€€€€€‰¹…µ”ˆè€‰±½½­…±¥­”µÍ­¥±°ˆ°(€€€€€€€€€€€€€€€€‰‘•ÍÉ¥ÁÑ¥½¸ˆè€‰=ÕÑÍ¥‘”Ñ¡”½¹™¥ÕÉ••áÑ•É¹…°É½½Ðˆ°(€€€€€€€€€€€€€€€€‰Í­¥±±}µ‘}Á…Ñ ˆèÍÑÈ (€€€€€€€€€€€€€€€€€€€±½½­…±¥­•}‘¥È€¼€‰±½½­…±¥­”µÍ­¥±°ˆ€¼€‰M-%10¹µˆ(€€€€€€€€€€€€€€€€¤°(€€€€€€€€€€€ô°(€€€€€€€€€€€€ˆ½¡ÕˆµÍ­¥±°ˆèì(€€€€€€€€€€€€€€€€‰¹…µ”ˆè€‰¡ÕˆµÍ­¥±°ˆ°(€€€€€€€€€€€€€€€€‰‘•ÍÉ¥ÁÑ¥½¸ˆè€‰%¹ÍÑ…±±•‰äÑ¡”¡Õˆˆ°(€€€€€€€€€€€€€€€€‰Í­¥±±}µ‘}Á…Ñ ˆèÍÑÈ (€€€€€€€€€€€€€€€€€€€±½…±}‘¥È€¼€ˆ¹¡Õˆˆ€¼€‰¡ÕˆµÍ­¥±°ˆ€¼€‰M-%10¹µˆ(€€€€€€€€€€€€€€€€¤°(€€€€€€€€€€€ô°(€€€€€€€€€€€€ˆ½¡Õˆµ‰…­ÕÀµÍ­¥±°ˆèì(€€€€€€€€€€€€€€€€‰¹…µ”ˆè€‰¡Õˆµ‰…­ÕÀµÍ­¥±°ˆ°(€€€€€€€€€€€€€€€€‰‘•ÍÉ¥ÁÑ¥½¸ˆè€‰¹½Éµ…°±½…°Í­¥±°ˆ°(€€€€€€€€€€€€€€€€‰Í­¥±±}µ‘}Á…Ñ ˆèÍÑÈ (€€€€€€€€€€€€€€€€€€€±½…±}‘¥È€¼€ˆ¹¡Õˆµ‰…­ÕÀˆ€¼€‰¡Õˆµ‰…­ÕÀµÍ­¥±°ˆ€¼€‰M-%10¹µˆ(€€€€€€€€€€€€€€€€¤°(€€€€€€€€€€€ô°(€€€€€€€€€€€€ˆ½¡Õˆµ½Ñ¡•ÈµÍ­¥±°ˆèì(€€€€€€€€€€€€€€€€‰¹…µ”ˆè€‰¡Õˆµ½Ñ¡•ÈµÍ­¥±°ˆ°(€€€€€€€€€€€€€€€€‰‘•ÍÉ¥ÁÑ¥½¸ˆè€‰¹½Ñ¡•È¹½Éµ…°±½…°Í­¥±°ˆ°(€€€€€€€€€€€€€€€€‰Í­¥±±}µ‘}Á…Ñ ˆèÍÑÈ (€€€€€€€€€€€€€€€€€€€±½…±}‘¥È€¼€ˆ¹¡Õˆµ½Ñ¡•Èˆ€¼€‰¡Õˆµ½Ñ¡•ÈµÍ­¥±°ˆ€¼€‰M-%10¹µˆ(€€€€€€€€€€€€€€€€¤°(€€€€€€€€€€€ô°(€€€€€€€ô((€€€€€€€…ÍÍ•ÉÐ€‰qpˆ¥¸ÍÑÈ¡±½…±}‘¥È¹É•Í½±Ù” ¤¤(€€€€€€€µ½¹­•åÁ…Ñ ¹Í•Ñ•¹Ø ‰!I5M}!=5ˆ°ÍÑÈ¡ÑµÁ}Á…Ñ ¤¤(€€€€€€€Ý¥Ñ € (€€€€€€€€€€€Á…Ñ  ‰…•¹Ð¹Í­¥±±}½µµ…¹‘Ì¹•Ñ}Í­¥±±}½µµ…¹‘Ìˆ°É•ÑÕÉ¹}Ù…±Õ”õ™…­•}µ‘Ì¤°(€€€€€€€€€€€Á…Ñ  ‰Ñ½½±Ì¹Í­¥±±Í}Ñ½½°¹M-%11M}%Hˆ°±½…±}‘¥È¤°(€€€€€€€€€€€Á…Ñ  (€€€€€€€€€€€€€€€€‰…•¹Ð¹Í­¥±±}ÕÑ¥±Ì¹•Ñ}•áÑ•É¹…±}Í­¥±±Í}‘¥ÉÌˆ°(€€€€€€€€€€€€€€€É•ÑÕÉ¹}Ù…±Õ”õm•áÑ•É¹…±}‘¥Ét°(€€€€€€€€€€€€¤°(€€€€€€€€¤è(€€€€€€€€€€€•¹ÑÉ¥•Ì°¡¥‘‘•¸€ô‘¥Í½É‘}Í­¥±±}½µµ…¹‘Ì (€€€€€€€€€€€€€€€µ…á}Í±½ÑÌôÔÀ°É•Í•ÉÙ•‘}¹…µ•ÌõÍ•Ð ¤°(€€€€€€€€€€€€¤((€€€€€€€…ÍÍ•ÉÐí¹…µ”™½È¹…µ”°}‘•ÍŒ°}­•ä¥¸•¹ÑÉ¥•Íô€ôôì(€€€€€€€€€€€€‰•áÑ•É¹…°µÍ­¥±°ˆ°(€€€€€€€€€€€€‰¡Õˆµ‰…­ÕÀµÍ­¥±°ˆ°(€€€€€€€€€€€€‰¡Õˆµ½Ñ¡•ÈµÍ­¥±°ˆ°(€€€€€€€€€€€€‰±½…°µÍ­¥±°ˆ°(€€€€€€€ô(€€€€€€€…ÍÍ•ÉÐ¡¥‘‘•¸€ôô€À((€€€‘•˜Ñ•ÍÑ}¹…µ•Í}…±±½Ý}¡åÁ¡•¹Ì¡Í•±˜°ÑµÁ}Á…Ñ °µ½¹­•åÁ…Ñ ¤è(€€€€€€€€ˆˆ‰¥Í½É¹…µ•ÌÍ¡½Õ±­••À¡åÁ¡•¹Ì€¡Õ¹±¥­”Q•±•É…´Ì|Í…¹¥Ñ¥é…Ñ¥½¸¤¸ˆˆˆ4(€€€€€€€™É½´Õ¹¥ÑÑ•ÍÐ¹µ½¬¥µÁ½ÉÐÁ…Ñ 4(4(€€€€€€€™…­•}Í­¥±±Í}‘¥È€ôÍÑÈ¡ÑµÁ}Á…Ñ €¼€‰Í­¥±±Ìˆ¤4(€€€€€€€™…­•}µ‘Ì€ôì4(€€€€€€€€€€€€ˆ½µäµ½½°µÍ­¥±°ˆèì4(€€€€€€€€€€€€€€€€‰¹…µ”ˆè€‰µäµ½½°µÍ­¥±°ˆ°4(€€€€€€€€€€€€€€€€‰‘•ÍÉ¥ÁÑ¥½¸ˆè€‰½½°Í­¥±°ˆ°4(€€€€€€€€€€€€€€€€‰Í­¥±±}µ‘}Á…Ñ ˆè˜‰í™…­•}Í­¥±±Í}‘¥Éô½µäµ½½°µÍ­¥±°½M-%10¹µˆ°4(€€€€€€€€€€€€€€€€‰Í­¥±±}‘¥Èˆè˜‰í™…­•}Í­¥±±Í}‘¥Éô½µäµ½½°µÍ­¥±°ˆ°4(€€€€€€€€€€€ô°4(€€€€€€€ô4(€€€€€€€µ½¹­•åÁ…Ñ ¹Í•Ñ•¹Ø ‰!I5M}!=5ˆ°ÍÑÈ¡ÑµÁ}Á…Ñ ¤¤4(€€€€€€€€¡ÑµÁ}Á…Ñ €¼€‰Í­¥±±Ìˆ¤¹µ­‘¥È¡•á¥ÍÑ}½¬õQÉÕ”¤4(€€€€€€€Ý¥Ñ € 4(€€€€€€€€€€€Á…Ñ  ‰…•¹Ð¹Í­¥±±}½µµ…¹‘Ì¹•Ñ}Í­¥±±}½µµ…¹‘Ìˆ°É•ÑÕÉ¹}Ù…±Õ”õ™…­•}µ‘Ì¤°4(€€€€€€€€€€€Á…Ñ  ‰Ñ½½±Ì¹Í­¥±±Í}Ñ½½°¹M-%11M}%Hˆ°ÑµÁ}Á…Ñ €¼€‰Í­¥±±Ìˆ¤°4(€€€€€€€€¤è4(€€€€€€€€€€€•¹ÑÉ¥•Ì°|€ô‘¥Í½É‘}Í­¥±±}½µµ…¹‘Ì 4(€€€€€€€€€€€€€€€µ…á}Í±½ÑÌôÔÀ°É•Í•ÉÙ•‘}¹…µ•ÌõÍ•Ð ¤°4(€€€€€€€€€€€€¤4(4(€€€€€€€…ÍÍ•ÉÐ•¹ÑÉ¥•ÍlÁulÁt€ôô€‰µäµ½½°µÍ­¥±°ˆ€€Œ¡åÁ¡•¹ÌÁÉ•Í•ÉÙ•4(4(€€€‘•˜Ñ•ÍÑ}…Á}•¹™½É•µ•¹Ð¡Í•±˜°ÑµÁ}Á…Ñ °µ½¹­•åÁ…Ñ ¤è4(€€€€€€€€ˆˆ‰¹ÑÉ¥•Ì‰•å½¹µ…á}Í±½ÑÌÍ¡½Õ±‰”¡¥‘‘•¸¸ˆˆˆ4(€€€€€€€™É½´Õ¹¥ÑÑ•ÍÐ¹µ½¬¥µÁ½ÉÐÁ…Ñ 4(4(€€€€€€€™…­•}Í­¥±±Í}‘¥È€ôÍÑÈ¡ÑµÁ}Á…Ñ €¼€‰Í­¥±±Ìˆ¤4(€€€€€€€™…­•}µ‘Ì€ôì4(€€€€€€€€€€€˜ˆ½Í­¥±°µí¤èÀÍ‘ôˆèì4(€€€€€€€€€€€€€€€€‰¹…µ”ˆè˜‰Í­¥±°µí¤èÀÍ‘ôˆ°4(€€€€€€€€€€€€€€€€‰‘•ÍÉ¥ÁÑ¥½¸ˆè˜‰M­¥±°í¥ôˆ°4(€€€€€€€€€€€€€€€€‰Í­¥±±}µ‘}Á…Ñ ˆè˜‰í™…­•}Í­¥±±Í}‘¥Éô½Í­¥±°µí¤èÀÍ‘ô½M-%10¹µˆ°4(€€€€€€€€€€€€€€€€‰Í­¥±±}‘¥Èˆè˜‰í™…­•}Í­¥±±Í}‘¥Éô½Í­¥±°µí¤èÀÍ‘ôˆ°4(€€€€€€€€€€€ô4(€€€€€€€€€€€™½È¤¥¸É…¹” ÈÀ¤4(€€€€€€€ô4(€€€€€€€µ½¹­•åÁ…Ñ ¹Í•Ñ•¹Ø ‰!I5M}!=5ˆ°ÍÑÈ¡ÑµÁ}Á…Ñ ¤¤4(€€€€€€€€¡ÑµÁ}Á…Ñ €¼€‰Í­¥±±Ìˆ¤¹µ­‘¥È¡•á¥ÍÑ}½¬õQÉÕ”¤4(€€€€€€€Ý¥Ñ € 4(€€€€€€€€€€€Á…Ñ  ‰…•¹Ð¹Í­¥±±}½µµ…¹‘Ì¹•Ñ}Í­¥±±}½µµ…¹‘Ìˆ°É•ÑÕÉ¹}Ù…±Õ”õ™…­•}µ‘Ì¤°4(€€€€€€€€€€€Á…Ñ  ‰Ñ½½±Ì¹Í­¥±±Í}Ñ½½°¹M-%11M}%Hˆ°ÑµÁ}Á…Ñ €¼€‰Í­¥±±Ìˆ¤°4(€€€€€€€€¤è4(€€€€€€€€€€€•¹ÑÉ¥•Ì°¡¥‘‘•¸€ô‘¥Í½É‘}Í­¥±±}½µµ…¹‘Ì 4(€€€€€€€€€€€€€€€µ…á}Í±½ÑÌôÔ°É•Í•ÉÙ•‘}¹…µ•ÌõÍ•Ð ¤°4(€€€€€€€€€€€€¤4(4(€€€€€€€…ÍÍ•ÉÐ±•¸¡•¹ÑÉ¥•Ì¤€ôô€Ô4(€€€€€€€…ÍÍ•ÉÐ¡¥‘‘•¸€ôô€ÄÔ4(4(4(4(4(4(4(Œ€´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´4(Œ¥Í½ÉÍ­¥±°½µµ…¹‘ÌÉ½ÕÁ•‰ä…Ñ•½Éä4(Œ€´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´4(4)™É½´¡•Éµ•Í}±¤¹½µµ…¹‘Ì¥µÁ½ÉÐ‘¥Í½É‘}Í­¥±±}½µµ…¹‘Í}‰å}…Ñ•½Éä€€Œ¹½Å„èÐÀÈ4(4(4)±…ÍÌQ•ÍÑ¥Í½É‘M­¥±±½µµ…¹‘Í	å…Ñ•½Éäè4(€€€€ˆˆ‰Q•ÍÑÌ™½È‘¥Í½É‘}Í­¥±±}½µµ…¹‘Í}‰å}…Ñ•½Éä ¤ƒŠP€½Í­¥±°É½ÕÀÉ•¥ÍÑÉ…Ñ¥½¸¸ˆˆˆ4(4(4(4(4(€€€‘•˜Ñ•ÍÑ}¹½}±•…å|ÈÕàÈÕ}…À¡Í•±˜°ÑµÁ}Á…Ñ °µ½¹­•åÁ…Ñ ¤è4(€€€€€€€€ˆˆ‰Q¡”½±¹•ÍÑ•µ±…å½ÕÐ…ÁÌ€ ÈÔÉ½ÕÁÌƒ\€ÈÔÍ­¥±±Ì½É½ÕÀ¤…É”½¹”¸4(4(€€€€€€€Q¡”±¥Ù”…±±•È™±…ÑÑ•¹Ì…Ñ•½É¥•Ì¥¹Ñ¼„Í¥¹±”…ÕÑ½½µÁ±•Ñ”±¥ÍÐ°4(€€€€€€€Ý¡¥ ¥Í½É™•Ñ¡•Ì‘å¹…µ¥…±±äƒŠPÑ¡”Á•Èµ½µµ…¹€á-Á…å±½…4(€€€€€€€½¹•É¸™É½´Ñ¡”½±¹•ÍÑ•±…å½ÕÐ€ ŒÄÄÌÈÄ°€ŒÄÀÈÔä¤¹¼±½¹•È…ÁÁ±¥•Ì¸4(€€€€€€€Õ…É‘Ì……¥¹ÍÐ…¥‘•¹Ñ…±±äÉ”µ¥¹ÑÉ½‘Õ¥¹œÑ¡”…ÁÌ°Ý¡¥ Ý½Õ±4(€€€€€€€Í¥±•¹Ñ±ä‘É½ÀÍ­¥±±Ì¥¸Ñ¡”€ÈÙÑ ¬…±Á¡…‰•Ñ¥…°…Ñ•½Éä€¡Ñ¡”•á…Ð4(€€€€€€€™…¥±ÕÉ”µ½‘”ÕÍ•ÉÌÝ•É”¡¥ÑÑ¥¹œÝ¥Ñ €Èä…Ñ•½Éä‘¥ÉÌ½¸É•…°4(€€€€€€€¥¹ÍÑ…±±Ì¤¸4(€€€€€€€€ˆˆˆ4(€€€€€€€™É½´Õ¹¥ÑÑ•ÍÐ¹µ½¬¥µÁ½ÉÐÁ…Ñ 4(4(€€€€€€€™…­•}Í­¥±±Í}‘¥È€ôÍÑÈ¡ÑµÁ}Á…Ñ €¼€‰Í­¥±±Ìˆ¤4(4(€€€€€€€€Œ	Õ¥±€ÌÀ…Ñ•½É¥•Ì€ ø½±}5a}I=UALôÈÔ¤•… Ý¥Ñ €ÌÀÍ­¥±±Ì4(€€€€€€€€Œ€ ø½±}5a}AI}I=U@ôÈÔ¤¸4(€€€€€€€™…­•}µ‘Ì€ôíô4(€€€€€€€™½ÈŒ¥¸É…¹” ÌÀ¤è4(€€€€€€€€€€€…Ð€ô˜‰…ÑíŒèÀÉ‘ôˆ€€Œ…ÐÀÀ°…ÐÀÄ°€¸¸¸°…ÐÈäƒŠP€ÌÀ…Ñ•½É¥•Ì4(€€€€€€€€€€€™½ÈÌ¥¸É…¹” ÌÀ¤è4(€€€€€€€€€€€€€€€¹…µ”€ô˜‰Í­¥±°µíŒèÀÉ‘ôµíÌèÀÉ‘ôˆ4(€€€€€€€€€€€€€€€Í­¥±±}ÍÕ‰‘¥È€ôÑµÁ}Á…Ñ €¼€‰Í­¥±±Ìˆ€¼…Ð€¼¹…µ”4(€€€€€€€€€€€€€€€Í­¥±±}ÍÕ‰‘¥È¹µ­‘¥È¡Á…É•¹ÑÌõQÉÕ”°•á¥ÍÑ}½¬õQÉÕ”¤4(€€€€€€€€€€€€€€€€¡Í­¥±±}ÍÕ‰‘¥È€¼€‰M-%10¹µˆ¤¹ÝÉ¥Ñ•}Ñ•áÐ ˆ´´µq¹¹…µ”èáq¸´´µq¸ˆ¤4(€€€€€€€€€€€€€€€™…­•}µ‘Ím˜ˆ½í¹…µ•ô‰t€ôì4(€€€€€€€€€€€€€€€€€€€€‰¹…µ”ˆè¹…µ”°4(€€€€€€€€€€€€€€€€€€€€‰‘•ÍÉ¥ÁÑ¥½¸ˆè˜‰…Ñ•½Éäí…ÑôÍ­¥±°íÍôˆ°4(€€€€€€€€€€€€€€€€€€€€‰Í­¥±±}µ‘}Á…Ñ ˆè˜‰í™…­•}Í­¥±±Í}‘¥Éô½í…Ñô½í¹…µ•ô½M-%10¹µˆ°4(€€€€€€€€€€€€€€€ô4(4(€€€€€€€µ½¹­•åÁ…Ñ ¹Í•Ñ•¹Ø ‰!I5M}!=5ˆ°ÍÑÈ¡ÑµÁ}Á…Ñ ¤¤4(€€€€€€€Ý¥Ñ € 4(€€€€€€€€€€€Á…Ñ  ‰…•¹Ð¹Í­¥±±}½µµ…¹‘Ì¹•Ñ}Í­¥±±}½µµ…¹‘Ìˆ°É•ÑÕÉ¹}Ù…±Õ”õ™…­•}µ‘Ì¤°4(€€€€€€€€€€€Á…Ñ  ‰Ñ½½±Ì¹Í­¥±±Í}Ñ½½°¹M-%11M}%Hˆ°ÑµÁ}Á…Ñ €¼€‰Í­¥±±Ìˆ¤°4(€€€€€€€€¤è4(€€€€€€€€€€€…Ñ•½É¥•Ì°Õ¹…Ñ•½É¥é•°¡¥‘‘•¸€ô‘¥Í½É‘}Í­¥±±}½µµ…¹‘Í}‰å}…Ñ•½Éä 4(€€€€€€€€€€€€€€€É•Í•ÉÙ•‘}¹…µ•ÌõÍ•Ð ¤°4(€€€€€€€€€€€€¤4(4(€€€€€€€€ŒÙ•Éä…Ñ•½ÉäÍ¡½Õ±‰”ÁÉ•Í•¹ÐƒŠP¹¼€ÈÔµÉ½ÕÀ…À4(€€€€€€€…ÍÍ•ÉÐ±•¸¡…Ñ•½É¥•Ì¤€ôô€ÌÀ°€ 4(€€€€€€€€€€€˜‰•áÁ•Ñ•…±°€ÌÀ…Ñ•½É¥•Ì°½Ðí±•¸¡…Ñ•½É¥•Ì¥ô€ˆ4(€€€€€€€€€€€˜ˆ¡…À™É½´½±¹•ÍÑ•±…å½ÕÐµÕÍÐ‰”É•µ½Ù•¤ˆ4(€€€€€€€€¤4(€€€€€€€€ŒÙ•ÉäÍ­¥±°¥¸•Ù•Éä…Ñ•½ÉäµÕÍÐ‰”ÁÉ•Í•¹ÐƒŠP¹¼€ÈÔµÁ•ÈµÉ½ÕÀ…À4(€€€€€€€™½È…Ñ}¹…µ”°•¹ÑÉ¥•Ì¥¸…Ñ•½É¥•Ì¹¥Ñ•µÌ ¤è4(€€€€€€€€€€€…ÍÍ•ÉÐ±•¸¡•¹ÑÉ¥•Ì¤€ôô€ÌÀ°€ 4(€€€€€€€€€€€€€€€˜‰…Ñ•½Éäí…Ñ}¹…µ•ôè•áÁ•Ñ•€ÌÀÍ­¥±±Ì°½Ðí±•¸¡•¹ÑÉ¥•Ì¥ô€ˆ4(€€€€€€€€€€€€€€€˜ˆ¡…À™É½´½±¹•ÍÑ•±…å½ÕÐµÕÍÐ‰”É•µ½Ù•¤ˆ4(€€€€€€€€€€€€¤4(€€€€€€€€Œ9½Ñ¡¥¹œÍ¡½Õ±‰”É•Á½ÉÑ•¡¥‘‘•¸™½ÈÑ¡”…ÀÉ•…Í½¸€¡Ñ¡”½¹±ä4(€€€€€€€€Œ±•¥Ñ¥µ…Ñ”¡¥‘‘•¸É•…Í½¸¹½Ü¥Ì¹…µ”±…µÀ½±±¥Í¥½¹Ì°Ý¡¥ 4(€€€€€€€€Œ‘½¸Ð¡…ÁÁ•¸¡•É”Í¥¹”…±°¹…µ•Ì…É”Õ¹¥ÅÕ”¤¸4(€€€€€€€…ÍÍ•ÉÐ¡¥‘‘•¸€ôô€À4(4(€€€‘•˜Ñ•ÍÑ}•áÑ•É¹…±}‘¥ÉÍ}Í­¥±±Í}¥¹±Õ‘•¡Í•±˜°ÑµÁ}Á…Ñ °µ½¹­•åÁ…Ñ ¤è(€€€€€€€€ˆˆ‰M­¥±±Ì¥¸Í­¥±±Ì¹•áÑ•É¹…±}‘¥ÉÍ€µÕÍÐ…ÁÁ•…È¥¸€½Í­¥±°…ÕÑ½½µÁ±•Ñ”¸4(4(€€€€€€€€ŒÄàÜÐÄ™¥á•Ñ¡¥Ì™½ÈÑ¡”™±…Ð‘¥Í½É‘}Í­¥±±}½µµ…¹‘Í€½±±•Ñ½È4(€€€€€€€‰ÕÐ±•™Ð‘¥Í½É‘}Í­¥±±}½µµ…¹‘Í}‰å}…Ñ•½Éå€€¡Ñ¡”±¥Ù”…±±•È™½È4(€€€€€€€¥Í½ÉÌ€½Í­¥±±€½µµ…¹¤ÍÑ¥±°™¥±Ñ•É¥¹œ‰ä4(€€€€€€€M-%11M}%I€ÁÉ•™¥à½¹±ä¸I•É•ÍÍ¥½¸Õ…ÉÑ¡…Ð‰½Ñ ½±±•Ñ½ÉÌ4(€€€€€€€¹½Ü…•ÁÐ•áÑ•É¹…°µ‘¥ÈÍ­¥±±Ì¸4(€€€€€€€€ˆˆˆ4(€€€€€€€™É½´Õ¹¥ÑÑ•ÍÐ¹µ½¬¥µÁ½ÉÐÁ…Ñ 4(4(€€€€€€€±½…±}Í­¥±±Í}‘¥È€ôÑµÁ}Á…Ñ €¼€‰±½…°µÍ­¥±±Ìˆ4(€€€€€€€•áÑ•É¹…±}‘¥È€ôÑµÁ}Á…Ñ €¼€‰•áÑ•É¹…°µÍ­¥±±Ìˆ4(4(€€€€€€€€¡±½…±}Í­¥±±Í}‘¥È€¼€‰É•…Ñ¥Ù”ˆ€¼€‰±½…°µÍ­¥±°ˆ¤¹µ­‘¥È¡Á…É•¹ÑÌõQÉÕ”¤4(€€€€€€€€¡±½…±}Í­¥±±Í}‘¥È€¼€‰É•…Ñ¥Ù”ˆ€¼€‰±½…°µÍ­¥±°ˆ€¼€‰M-%10¹µˆ¤¹ÝÉ¥Ñ•}Ñ•áÐ ˆˆ¤4(4(€€€€€€€€¡•áÑ•É¹…±}‘¥È€¼€‰µ±½ÁÌˆ€¼€‰•áÑ•É¹…°µÍ­¥±°ˆ¤¹µ­‘¥È¡Á…É•¹ÑÌõQÉÕ”¤4(€€€€€€€€¡•áÑ•É¹…±}‘¥È€¼€‰µ±½ÁÌˆ€¼€‰•áÑ•É¹…°µÍ­¥±°ˆ€¼€‰M-%10¹µˆ¤¹ÝÉ¥Ñ•}Ñ•áÐ ˆˆ¤4(4(€€€€€€€™…­•}µ‘Ì€ôì4(€€€€€€€€€€€€ˆ½±½…°µÍ­¥±°ˆèì4(€€€€€€€€€€€€€€€€‰¹…µ”ˆè€‰±½…°µÍ­¥±°ˆ°4(€€€€€€€€€€€€€€€€‰‘•ÍÉ¥ÁÑ¥½¸ˆè€‰1½…°ˆ°4(€€€€€€€€€€€€€€€€‰Í­¥±±}µ‘}Á…Ñ ˆèÍÑÈ¡±½…±}Í­¥±±Í}‘¥È€¼€‰É•…Ñ¥Ù”ˆ€¼€‰±½…°µÍ­¥±°ˆ€¼€‰M-%10¹µˆ¤°4(€€€€€€€€€€€ô°4(€€€€€€€€€€€€ˆ½•áÑ•É¹…°µÍ­¥±°ˆèì4(€€€€€€€€€€€€€€€€‰¹…µ”ˆè€‰•áÑ•É¹…°µÍ­¥±°ˆ°4(€€€€€€€€€€€€€€€€‰‘•ÍÉ¥ÁÑ¥½¸ˆè€‰áÑ•É¹…°ˆ°4(€€€€€€€€€€€€€€€€‰Í­¥±±}µ‘}Á…Ñ ˆèÍÑÈ¡•áÑ•É¹…±}‘¥È€¼€‰µ±½ÁÌˆ€¼€‰•áÑ•É¹…°µÍ­¥±°ˆ€¼€‰M-%10¹µˆ¤°4(€€€€€€€€€€€ô°4(€€€€€€€ô4(€€€€€€€µ½¹­•åÁ…Ñ ¹Í•Ñ•¹Ø ‰!I5M}!=5ˆ°ÍÑÈ¡ÑµÁ}Á…Ñ ¤¤4(€€€€€€€Ý¥Ñ € 4(€€€€€€€€€€€Á…Ñ  ‰…•¹Ð¹Í­¥±±}½µµ…¹‘Ì¹•Ñ}Í­¥±±}½µµ…¹‘Ìˆ°É•ÑÕÉ¹}Ù…±Õ”õ™…­•}µ‘Ì¤°4(€€€€€€€€€€€Á…Ñ  ‰Ñ½½±Ì¹Í­¥±±Í}Ñ½½°¹M-%11M}%Hˆ°±½…±}Í­¥±±Í}‘¥È¤°4(€€€€€€€€€€€Á…Ñ  4(€€€€€€€€€€€€€€€€‰…•¹Ð¹Í­¥±±}ÕÑ¥±Ì¹•Ñ}•áÑ•É¹…±}Í­¥±±Í}‘¥ÉÌˆ°4(€€€€€€€€€€€€€€€É•ÑÕÉ¹}Ù…±Õ”õm•áÑ•É¹…±}‘¥Ét°4(€€€€€€€€€€€€¤°4(€€€€€€€€¤è4(€€€€€€€€€€€…Ñ•½É¥•Ì°Õ¹…Ñ•½É¥é•°¡¥‘‘•¸€ô‘¥Í½É‘}Í­¥±±}½µµ…¹‘Í}‰å}…Ñ•½Éä 4(€€€€€€€€€€€€€€€É•Í•ÉÙ•‘}¹…µ•ÌõÍ•Ð ¤°4(€€€€€€€€€€€€¤4(4(€€€€€€€€Œ1½…°Í­¥±°ƒŠHÉ½ÕÁ•Õ¹‘•È€‰É•…Ñ¥Ù”ˆ4(€€€€€€€…ÍÍ•ÉÐ€‰É•…Ñ¥Ù”ˆ¥¸…Ñ•½É¥•Ì4(€€€€€€€…ÍÍ•ÉÐ…¹ä¡¸€ôô€‰±½…°µÍ­¥±°ˆ™½È¸°}°}¬¥¸…Ñ•½É¥•Íl‰É•…Ñ¥Ù”‰t¤4(€€€€€€€€ŒáÑ•É¹…°Í­¥±°ƒŠHÉ½ÕÁ•Õ¹‘•È¥ÑÌ½Ý¸Ñ½Àµ±•Ù•°‘¥È€‰µ±½ÁÌˆ4(€€€€€€€…ÍÍ•ÉÐ€‰µ±½ÁÌˆ¥¸…Ñ•½É¥•Ì°€ 4(€€€€€€€€€€€€‰•áÑ•É¹…°µ‘¥ÈÍ­¥±±ÌµÕÍÐ‰”¥¹±Õ‘•ƒŠPÑ¡”½±M-%11M}%Hµ½¹±ä€ˆ4(€€€€€€€€€€€€‰ÁÉ•™¥à¡•¬Ý…Ì‰É½­•¸™½È‰å}…Ñ•½Éä€¡½µÁ±•Ñ•Ì€ŒÄàÜÐÄ¤ˆ4(€€€€€€€€¤4(€€€€€€€…ÍÍ•ÉÐ…¹ä¡¸€ôô€‰•áÑ•É¹…°µÍ­¥±°ˆ™½È¸°}°}¬¥¸…Ñ•½É¥•Íl‰µ±½ÁÌ‰t¤4(€€€€€€€…ÍÍ•ÉÐÕ¹…Ñ•½É¥é•€ôômt(€€€€€€€…ÍÍ•ÉÐ¡¥‘‘•¸€ôô€À((€€€‘•˜Ñ•ÍÑ}¡Õ‰}•á±ÕÍ¥½¹}¥Í}Á…Ñ¡}½µÁ½¹•¹Ñ}…Ý…É”¡Í•±˜°ÑµÁ}Á…Ñ °µ½¹­•åÁ…Ñ ¤è(€€€€€€€€ˆˆ‰¥Í½É…Ñ•½É¥•Ì•á±Õ‘”€¹¡Õˆ°¹½ÐÍ¥µ¥±…É±ä¹…µ•Í¥‰±¥¹Ì¸ˆˆˆ(€€€€€€€™É½´Õ¹¥ÑÑ•ÍÐ¹µ½¬¥µÁ½ÉÐÁ…Ñ ((€€€€€€€±½…±}‘¥È€ôÑµÁ}Á…Ñ €¼€‰Í­¥±±Ìˆ(€€€€€€€™…­•}µ‘Ì€ôì(€€€€€€€€€€€€ˆ½¡ÕˆµÍ­¥±°ˆèì(€€€€€€€€€€€€€€€€‰¹…µ”ˆè€‰¡ÕˆµÍ­¥±°ˆ°(€€€€€€€€€€€€€€€€‰‘•ÍÉ¥ÁÑ¥½¸ˆè€‰%¹ÍÑ…±±•‰äÑ¡”¡Õˆˆ°(€€€€€€€€€€€€€€€€‰Í­¥±±}µ‘}Á…Ñ ˆèÍÑÈ¡±½…±}‘¥È€¼€ˆ¹¡Õˆˆ€¼€‰¡ÕˆµÍ­¥±°ˆ€¼€‰M-%10¹µˆ¤°(€€€€€€€€€€€ô°(€€€€€€€€€€€€ˆ½¡Õˆµ‰…­ÕÀµÍ­¥±°ˆèì(€€€€€€€€€€€€€€€€‰¹…µ”ˆè€‰¡Õˆµ‰…­ÕÀµÍ­¥±°ˆ°(€€€€€€€€€€€€€€€€‰‘•ÍÉ¥ÁÑ¥½¸ˆè€‰¹½Éµ…°±½…°Í­¥±°ˆ°(€€€€€€€€€€€€€€€€‰Í­¥±±}µ‘}Á…Ñ ˆèÍÑÈ¡±½…±}‘¥È€¼€ˆ¹¡Õˆµ‰…­ÕÀˆ€¼€‰¡Õˆµ‰…­ÕÀµÍ­¥±°ˆ€¼€‰M-%10¹µˆ¤°(€€€€€€€€€€€ô°(€€€€€€€€€€€€ˆ½¡Õˆµ½Ñ¡•ÈµÍ­¥±°ˆèì(€€€€€€€€€€€€€€€€‰¹…µ”ˆè€‰¡Õˆµ½Ñ¡•ÈµÍ­¥±°ˆ°(€€€€€€€€€€€€€€€€‰‘•ÍÉ¥ÁÑ¥½¸ˆè€‰¹½Ñ¡•È¹½Éµ…°±½…°Í­¥±°ˆ°(€€€€€€€€€€€€€€€€‰Í­¥±±}µ‘}Á…Ñ ˆèÍÑÈ¡±½…±}‘¥È€¼€ˆ¹¡Õˆµ½Ñ¡•Èˆ€¼€‰¡Õˆµ½Ñ¡•ÈµÍ­¥±°ˆ€¼€‰M-%10¹µˆ¤°(€€€€€€€€€€€ô°(€€€€€€€ô((€€€€€€€µ½¹­•åÁ…Ñ ¹Í•Ñ•¹Ø ‰!I5M}!=5ˆ°ÍÑÈ¡ÑµÁ}Á…Ñ ¤¤(€€€€€€€Ý¥Ñ € (€€€€€€€€€€€Á…Ñ  ‰…•¹Ð¹Í­¥±±}½µµ…¹‘Ì¹•Ñ}Í­¥±±}½µµ…¹‘Ìˆ°É•ÑÕÉ¹}Ù…±Õ”õ™…­•}µ‘Ì¤°(€€€€€€€€€€€Á…Ñ  ‰Ñ½½±Ì¹Í­¥±±Í}Ñ½½°¹M-%11M}%Hˆ°±½…±}‘¥È¤°(€€€€€€€€€€€Á…Ñ  ‰…•¹Ð¹Í­¥±±}ÕÑ¥±Ì¹•Ñ}•áÑ•É¹…±}Í­¥±±Í}‘¥ÉÌˆ°É•ÑÕÉ¹}Ù…±Õ”õmt¤°(€€€€€€€€¤è(€€€€€€€€€€€…Ñ•½É¥•Ì°Õ¹…Ñ•½É¥é•°¡¥‘‘•¸€ô‘¥Í½É‘}Í­¥±±}½µµ…¹‘Í}‰å}…Ñ•½Éä (€€€€€€€€€€€€€€€É•Í•ÉÙ•‘}¹…µ•ÌõÍ•Ð ¤°(€€€€€€€€€€€€¤((€€€€€€€…ÍÍ•ÉÐ€ˆ¹¡Õˆˆ¹½Ð¥¸…Ñ•½É¥•Ì(€€€€€€€…ÍÍ•ÉÐ…¹ä¡¹…µ”€ôô€‰¡Õˆµ‰…­ÕÀµÍ­¥±°ˆ™½È¹…µ”°}‘•ÍŒ°}­•ä¥¸…Ñ•½É¥•Ílˆ¹¡Õˆµ‰…­ÕÀ‰t¤(€€€€€€€…ÍÍ•ÉÐ…¹ä¡¹…µ”€ôô€‰¡Õˆµ½Ñ¡•ÈµÍ­¥±°ˆ™½È¹…µ”°}‘•ÍŒ°}­•ä¥¸…Ñ•½É¥•Ílˆ¹¡Õˆµ½Ñ¡•È‰t¤(€€€€€€€…ÍÍ•ÉÐÕ¹…Ñ•½É¥é•€ôômt(€€€€€€€…ÍÍ•ÉÐ¡¥‘‘•¸€ôô€À(4(4(Œ€´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´4(ŒA±Õ¥¸Í±…Í ½µµ…¹¥¹Ñ•É…Ñ¥½¸4(Œ€´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´4(4)±…ÍÌQ•ÍÑA±Õ¥¹½µµ…¹‘¹Õµ•É…Ñ¥½¸è4(€€€€ˆˆ‰A±Õ¥¸½µµ…¹‘ÌÉ•¥ÍÑ•É•Ù¥„Ñà¹É•¥ÍÑ•É}½µµ…¹ ¤µÕÍÐ‰”ÍÕÉ™…•4(€€€‰ä•Ù•Éä…Ñ•Ý…ä•¹Õµ•É…Ñ½È€¡Q•±•É…´µ•¹Ô°M±…¬ÍÕ‰½µµ…¹µ…À°•ÑŒ¸¤¸4(€€€€ˆˆˆ4(4(€€€‘•˜}Á…Ñ¡}Á±Õ¥¹}½µµ…¹‘Ì¡Í•±˜°µ½¹­•åÁ…Ñ °½µµ…¹‘Ì¤è4(€€€€€€€€ˆˆ‰5½¹­•åÁ…Ñ ¡•Éµ•Í}±¤¹Á±Õ¥¹Ì¹•Ñ}Á±Õ¥¹}½µµ…¹‘Ì ¤Ñ¼„™¥á•‘¥Ð¸ˆˆˆ4(€€€€€€€™É½´¡•Éµ•Í}±¤¥µÁ½ÉÐÁ±Õ¥¹Ì…Ì}Á±Õ¥¹Í}µ½4(4(€€€€€€€µ½¹­•åÁ…Ñ ¹Í•Ñ…ÑÑÈ 4(€€€€€€€€€€€}Á±Õ¥¹Í}µ½°€‰•Ñ}Á±Õ¥¹}½µµ…¹‘Ìˆ°±…µ‰‘„è‘¥Ð¡½µµ…¹‘Ì¤4(€€€€€€€€¤4(4(4(4(€€€‘•˜Ñ•ÍÑ}Á±Õ¥¹}½µµ…¹‘}Ý¥Ñ¡}¡åÁ¡•¹Í}Í…¹¥Ñ¥é•‘}™½É}Ñ•±•É…´¡Í•±˜°µ½¹­•åÁ…Ñ ¤è4(€€€€€€€€ˆˆ‰A±Õ¥¸¹…µ•Ì½¹Ñ…¥¹¥¹œ¡åÁ¡•¹ÌµÕÍÐ‰”Õ¹‘•ÉÍ½É”µ¹½Éµ…±¥é•™½ÈQ•±•É…´¸ˆˆˆ4(€€€€€€€Í•±˜¹}Á…Ñ¡}Á±Õ¥¹}½µµ…¹‘Ì¡µ½¹­•åÁ…Ñ °ì4(€€€€€€€€€€€€‰µäµÁ±Õ¥¸µµˆèì4(€€€€€€€€€€€€€€€€‰¡…¹‘±•Èˆè±…µ‰‘„}„è€‰½¬ˆ°4(€€€€€€€€€€€€€€€€‰‘•ÍÉ¥ÁÑ¥½¸ˆè€‰‘•ÍŒˆ°4(€€€€€€€€€€€€€€€€‰…ÉÍ}¡¥¹Ðˆè€ˆˆ°4(€€€€€€€€€€€€€€€€‰Á±Õ¥¸ˆè€‰Àˆ°4(€€€€€€€€€€€ô4(€€€€€€€ô¤4(€€€€€€€¹…µ•Ì€ôí¹…µ”™½È¹…µ”°}‘•ÍŒ¥¸Ñ•±•É…µ}‰½Ñ}½µµ…¹‘Ì ¥ô4(€€€€€€€…ÍÍ•ÉÐ€‰µå}Á±Õ¥¹}µˆ¥¸¹…µ•Ì4(€€€€€€€…ÍÍ•ÉÐ€‰µäµÁ±Õ¥¸µµˆ¹½Ð¥¸¹…µ•Ì4(4(4(4(€€€‘•˜Ñ•ÍÑ}Á±Õ¥¹}•¹Õµ•É…Ñ½É}¡…¹‘±•Í}µ¥ÍÍ¥¹}Á±Õ¥¹}µ…¹…•È¡Í•±˜°µ½¹­•åÁ…Ñ ¤è4(€€€€€€€€ˆˆ‰¹Õµ•É…Ñ½ÉÌµÕÍÐ¹•Ù•ÈÉ…¥Í”Ý¡•¸Á±Õ¥¸‘¥Í½Ù•ÉäÉ…¥Í•Ì¸ˆˆˆ4(€€€€€€€™É½´¡•Éµ•Í}±¤¥µÁ½ÉÐÁ±Õ¥¹Ì…Ì}Á±Õ¥¹Í}µ½4(4(€€€€€€€‘•˜}‰½½´ ¤è4(€€€€€€€€€€€É…¥Í”IÕ¹Ñ¥µ•ÉÉ½È ‰Á±Õ¥¸ÍåÍÑ•´‘½Ý¸ˆ¤4(4(€€€€€€€µ½¹­•åÁ…Ñ ¹Í•Ñ…ÑÑÈ¡}Á±Õ¥¹Í}µ½°€‰•Ñ}Á±Õ¥¹}½µµ…¹‘Ìˆ°}‰½½´¤4(4(€€€€€€€€Œ	½Ñ …±±ÌÍ¡½Õ±ÍÕ••…¹©ÕÍÐÉ•ÑÕÉ¸Ñ¡”‰Õ¥±Ðµ¥¸Í•Ð¸4(€€€€€€€Ñ}¹…µ•Ì€ôí¹…µ”™½È¹…µ”°}‘•ÍŒ¥¸Ñ•±•É…µ}‰½Ñ}½µµ…¹‘Ì ¥ô4(€€€€€€€Í±…­}¹…µ•Ì€ôÍ•Ð¡Í±…­}ÍÕ‰½µµ…¹‘}µ…À ¤¤4(€€€€€€€…ÍÍ•ÉÐ€‰ÍÑ…ÑÕÌˆ¥¸Ñ}¹…µ•Ì4(€€€€€€€…ÍÍ•ÉÐ€‰ÍÑ…ÑÕÌˆ¥¸Í±…­}¹…µ•Ì4(
+# â”€â”€ Subcommand tab completion â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+
+
+class TestSubcommandCompletion:
+
+
+
+
+
+
+    def test_tools_enable_skips_already_listed(self, monkeypatch):
+        """If the user already typed a name, don't suggest it again."""
+        monkeypatch.setattr(
+            "hermes_cli.tools_config._get_platform_tools",
+            lambda *_a, **_k: set(),
+        )
+        monkeypatch.setattr("hermes_cli.config.load_config", lambda: {})
+        monkeypatch.setattr(
+            "hermes_cli.tools_config._get_plugin_toolset_keys",
+            lambda: set(),
+        )
+
+        completions = _completions(SlashCommandCompleter(), "/tools enable spotify ")
+        texts = {c.text for c in completions}
+        assert "spotify" not in texts
+
+
+    def _fake_gateway(self, monkeypatch, platforms):
+        """Patch load_gateway_config with a fake whose connected platforms are
+        the keys of `platforms` (name -> home as None or a (chat_id, name) tuple).
+        """
+        from types import SimpleNamespace
+
+        enums = {name: SimpleNamespace(value=name) for name in platforms}
+        homes = {
+            name: (None if home is None else SimpleNamespace(chat_id=home[0], name=home[1]))
+            for name, home in platforms.items()
+        }
+        fake = SimpleNamespace(
+            get_connected_platforms=lambda: list(enums.values()),
+            get_home_channel=lambda p: homes[p.value],
+        )
+        monkeypatch.setattr("gateway.config.load_gateway_config", lambda: fake)
+
+    def test_handoff_completes_connected_platforms(self, monkeypatch):
+        """`/handoff ` offers connected platforms, with or without a home channel."""
+        self._fake_gateway(
+            monkeypatch,
+            {
+                "telegram": ("123", "Me"),
+                "discord": None,  # no home channel yet -> still listed
+            },
+        )
+
+        texts = {c.text for c in _completions(SlashCommandCompleter(), "/handoff ")}
+        assert texts == {"telegram", "discord"}
+
+
+
+
+
+# â”€â”€ Ghost text (SlashCommandAutoSuggest) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+
+
+def _suggestion(text: str, completer=None) -> str | None:
+    """Get ghost text suggestion for given input."""
+    suggest = SlashCommandAutoSuggest(completer=completer)
+    doc = Document(text=text)
+
+    class FakeBuffer:
+        pass
+
+    result = suggest.get_suggestion(FakeBuffer(), doc)
+    return result.text if result else None
+
+
+class TestGhostText:
+    def test_command_name_suggestion(self):
+        """/he â†’ 'lp'"""
+        assert _suggestion("/he") == "lp"
+
+
+    # -- stacked slash-skill ghost text -----------------------------------
+
+
+    def test_stacked_skill_ghost_text_skips_used(self):
+        completer = SlashCommandCompleter(
+            skill_commands_provider=lambda: {
+                "/alpha": {"description": "A"},
+                "/beta": {"description": "B"},
+            }
+        )
+        assert _suggestion("/alpha /a", completer=completer) is None
+        assert _suggestion("/alpha /b", completer=completer) == "eta"
+
+
+# ---------------------------------------------------------------------------
+# Telegram command name sanitization
+# ---------------------------------------------------------------------------
+
+
+class TestSanitizeTelegramName:
+    """Tests for _sanitize_telegram_name() â€” Telegram requires [a-z0-9_] only."""
+
+    def test_hyphens_replaced_with_underscores(self):
+        assert _sanitize_telegram_name("my-skill-name") == "my_skill_name"
+
+
+
+
+
+    def test_consecutive_underscores_collapsed(self):
+        assert _sanitize_telegram_name("a---b") == "a_b"
+        assert _sanitize_telegram_name("a-+-b") == "a_b"
+
+    def test_leading_trailing_underscores_stripped(self):
+        assert _sanitize_telegram_name("-leading") == "leading"
+        assert _sanitize_telegram_name("trailing-") == "trailing"
+        assert _sanitize_telegram_name("-both-") == "both"
+
+
+
+
+
+
+# ---------------------------------------------------------------------------
+# Telegram command name clamping (32-char limit)
+# ---------------------------------------------------------------------------
+
+
+class TestClampTelegramNames:
+    """Tests for _clamp_telegram_names() â€” 32-char enforcement + collision."""
+
+
+
+
+    def test_collision_between_entries_gets_incrementing_digits(self):
+        # Two long names that truncate to the same 32-char prefix
+        base = "y" * 40
+        entries = [(base + "_alpha", "d1"), (base + "_beta", "d2")]
+        result = _clamp_telegram_names(entries, set())
+        assert len(result) == 2
+        assert result[0][0] == "y" * _TG_NAME_LIMIT
+        assert result[1][0] == "y" * (_TG_NAME_LIMIT - 1) + "0"
+
+
+    def test_all_digits_exhausted_drops_entry(self):
+        prefix = "w" * _TG_NAME_LIMIT
+        # Reserve the plain truncation + all 10 digit slots
+        reserved = {prefix} | {"w" * (_TG_NAME_LIMIT - 1) + str(d) for d in range(10)}
+        long_name = "w" * 50
+        result = _clamp_telegram_names([(long_name, "d")], reserved)
+        assert result == []
+
+
+class TestClampCommandNamesTriples:
+    """Tests for _clamp_command_names with 3-tuples (name, desc, cmd_key).
+
+    Skill entries pass through _clamp_command_names as 3-tuples so the
+    original cmd_key survives name truncation.  Before the fix in PR #18951,
+    the code stripped cmd_key into a side-dict keyed by the *original*
+    (name, desc) pair â€” after truncation the lookup key no longer matched,
+    silently losing the cmd_key.
+    """
+
+
+    def test_long_name_preserves_cmd_key(self):
+        long = "a" * 50
+        cmd_key = f"/{long}"
+        result = _clamp_command_names([(long, "desc", cmd_key)], set())
+        assert len(result) == 1
+        name, desc, key = result[0]
+        assert len(name) == _CMD_NAME_LIMIT
+        assert key == cmd_key, "cmd_key must survive name clamping"
+
+    def test_collision_preserves_cmd_key(self):
+        prefix = "x" * _CMD_NAME_LIMIT
+        long = "x" * 50
+        result = _clamp_command_names(
+            [(long, "desc", "/long-skill")], reserved={prefix},
+        )
+        assert len(result) == 1
+        name, _desc, key = result[0]
+        assert name == "x" * (_CMD_NAME_LIMIT - 1) + "0"
+        assert key == "/long-skill"
+
+
+
+
+class TestDiscordSkillCmdKeyDispatch:
+    """Integration: discord_skill_commands preserves cmd_key for long names.
+
+    This tests the full pipeline: skill_commands â†’ _collect_gateway_skill_entries
+    â†’ _clamp_command_names â†’ returned triples, verifying that skills with names
+    exceeding Discord's 32-char limit still have their original cmd_key for
+    dispatch.
+    """
+
+    def test_long_skill_name_retains_cmd_key(self, tmp_path, monkeypatch):
+        from unittest.mock import patch
+
+        long_name = "this-is-a-very-long-skill-name-that-exceeds-limit"
+        cmd_key = f"/{long_name}"
+        fake_skills_dir = tmp_path / "skills"
+        fake_skills_dir.mkdir(exist_ok=True)
+        # Use resolved path â€” macOS /var â†’ /private/var symlink
+        # causes SKILLS_DIR.resolve() to differ from tmp_path.
+        resolved_dir = str(fake_skills_dir.resolve())
+
+        fake_cmds = {
+            cmd_key: {
+                "name": long_name,
+                "description": "A skill with a long name",
+                "skill_md_path": f"{resolved_dir}/{long_name}/SKILL.md",
+                "skill_dir": f"{resolved_dir}/{long_name}",
+            },
+        }
+
+        with patch("agent.skill_commands.get_skill_commands", return_value=fake_cmds), \
+             patch("tools.skills_tool.SKILLS_DIR", fake_skills_dir), \
+             patch("agent.skill_utils.get_external_skills_dirs", return_value=[]):
+            entries, hidden = discord_skill_commands(
+                max_slots=100, reserved_names=set(),
+            )
+
+        assert len(entries) == 1
+        name, desc, key = entries[0]
+        assert len(name) <= _CMD_NAME_LIMIT, "Name should be clamped to 32 chars"
+        assert key == cmd_key, (
+            f"cmd_key must be the original /{long_name}, got {key!r}"
+        )
+
+
+class TestTelegramMenuCommands:
+    """Integration: telegram_menu_commands enforces the 32-char limit."""
+
+
+
+
+
+
+
+
+
+    def test_external_dir_skills_included_in_telegram_menu(self, tmp_path, monkeypatch):
+        """External skills (``skills.external_dirs``) must appear in the Telegram menu.
+
+        Regression test for #8110 â€” external skills were visible to the
+        agent and CLI but silently excluded from gateway slash menus
+        because ``_collect_gateway_skill_entries`` only accepted skills
+        whose path started with ``SKILLS_DIR``.
+
+        Also verifies the trailing-slash boundary: a directory that
+        simply shares a prefix with a configured ``external_dirs`` entry
+        (``/tmp/my-skills-extra`` vs ``/tmp/my-skills``) must NOT be
+        admitted.
+        """
+        from unittest.mock import patch
+
+        local_dir = tmp_path / "skills"
+        local_dir.mkdir()
+        external_dir = tmp_path / "my-skills"
+        external_dir.mkdir()
+        lookalike_dir = tmp_path / "my-skills-extra"
+        lookalike_dir.mkdir()
+
+        monkeypatch.setenv("HERMES_HOME", str(tmp_path))
+        (tmp_path / "config.yaml").write_text(
+            f"skills:\n  external_dirs:\n    - {external_dir}\n"
+        )
+
+        fake_cmds = {
+            "/local-one": {
+                "name": "local-one",
+                "description": "Local",
+                "skill_md_path": str(local_dir / "local-one" / "SKILL.md"),
+                "skill_dir": str(local_dir / "local-one"),
+            },
+            "/morning-briefing": {
+                "name": "morning-briefing",
+                "description": "External skill",
+                "skill_md_path": str(external_dir / "morning-briefing" / "SKILL.md"),
+                "skill_dir": str(external_dir / "morning-briefing"),
+            },
+            "/lookalike-skill": {
+                "name": "lookalike-skill",
+                "description": "Lives in a sibling dir that shares a prefix",
+                "skill_md_path": str(lookalike_dir / "lookalike-skill" / "SKILL.md"),
+                "skill_dir": str(lookalike_dir / "lookalike-skill"),
+            },
+        }
+
+        with (
+            patch("agent.skill_commands.get_skill_commands", return_value=fake_cmds),
+            patch("tools.skills_tool.SKILLS_DIR", local_dir),
+            patch(
+                "agent.skill_utils.get_external_skills_dirs",
+                return_value=[external_dir],
+            ),
+        ):
+            menu, _ = telegram_menu_commands(max_commands=100)
+
+        menu_names = {n for n, _ in menu}
+        assert "local_one" in menu_names, "local skill must appear"
+        assert "morning_briefing" in menu_names, (
+            "external skill from skills.external_dirs must appear (fixes #8110)"
+        )
+        assert "lookalike_skill" not in menu_names, (
+            "prefix-match sibling directories must not be admitted"
+        )
+
+    def test_hub_exclusion_is_path_component_aware(self, tmp_path, monkeypatch):
+        """Exclude real .hub descendants without hiding prefix-sharing dirs."""
+        from unittest.mock import patch
+
+        local_dir = tmp_path / "skills"
+        local_dir.mkdir()
+        fake_cmds = {
+            "/hub-skill": {
+                "name": "hub-skill",
+                "description": "Installed by the hub",
+                "skill_md_path": str(local_dir / ".hub" / "hub-skill" / "SKILL.md"),
+            },
+            "/hub-backup-skill": {
+                "name": "hub-backup-skill",
+                "description": "A normal local skill",
+                "skill_md_path": str(local_dir / ".hub-backup" / "hub-backup-skill" / "SKILL.md"),
+            },
+            "/hub-other-skill": {
+                "name": "hub-other-skill",
+                "description": "Another normal local skill",
+                "skill_md_path": str(local_dir / ".hub-other" / "hub-other-skill" / "SKILL.md"),
+            },
+        }
+
+        monkeypatch.setenv("HERMES_HOME", str(tmp_path))
+        with (
+            patch("agent.skill_commands.get_skill_commands", return_value=fake_cmds),
+            patch("tools.skills_tool.SKILLS_DIR", local_dir),
+            patch("agent.skill_utils.get_external_skills_dirs", return_value=[]),
+        ):
+            menu, _ = telegram_menu_commands(max_commands=100)
+
+        menu_names = {name for name, _description in menu}
+        assert "hub_skill" not in menu_names
+        assert "hub_backup_skill" in menu_names
+        assert "hub_other_skill" in menu_names
+
+    def test_special_chars_in_skill_names_sanitized(self, tmp_path, monkeypatch):
+        """Skills with +, /, or other special chars produce valid Telegram names."""
+        from unittest.mock import patch
+        import re
+
+        monkeypatch.setenv("HERMES_HOME", str(tmp_path))
+
+        fake_skills_dir = str(tmp_path / "skills")
+        fake_cmds = {
+            "/jellyfin-+-jellystat-24h-summary": {
+                "name": "Jellyfin + Jellystat 24h Summary",
+                "description": "Test",
+                "skill_md_path": f"{fake_skills_dir}/jellyfin/SKILL.md",
+                "skill_dir": f"{fake_skills_dir}/jellyfin",
+            },
+            "/sonarr-v3/v4-api": {
+                "name": "Sonarr v3/v4 API",
+                "description": "Test",
+                "skill_md_path": f"{fake_skills_dir}/sonarr/SKILL.md",
+                "skill_dir": f"{fake_skills_dir}/sonarr",
+            },
+        }
+        with (
+            patch("agent.skill_commands.get_skill_commands", return_value=fake_cmds),
+            patch("tools.skills_tool.SKILLS_DIR", tmp_path / "skills"),
+        ):
+            (tmp_path / "skills").mkdir(exist_ok=True)
+            menu, _ = telegram_menu_commands(max_commands=100)
+
+        # Every name must match Telegram's [a-z0-9_] requirement
+        tg_valid = re.compile(r"^[a-z0-9_]+$")
+        for name, _ in menu:
+            assert tg_valid.match(name), f"Invalid Telegram command name: {name!r}"
+
+    def test_empty_sanitized_names_excluded(self, tmp_path, monkeypatch):
+        """Skills whose names sanitize to empty string are silently dropped."""
+        from unittest.mock import patch
+
+        monkeypatch.setenv("HERMES_HOME", str(tmp_path))
+
+        fake_skills_dir = str(tmp_path / "skills")
+        fake_cmds = {
+            "/+++": {
+                "name": "+++",
+                "description": "All special chars",
+                "skill_md_path": f"{fake_skills_dir}/bad/SKILL.md",
+                "skill_dir": f"{fake_skills_dir}/bad",
+            },
+            "/valid-skill": {
+                "name": "valid-skill",
+                "description": "Normal skill",
+                "skill_md_path": f"{fake_skills_dir}/valid/SKILL.md",
+                "skill_dir": f"{fake_skills_dir}/valid",
+            },
+        }
+        with (
+            patch("agent.skill_commands.get_skill_commands", return_value=fake_cmds),
+            patch("tools.skills_tool.SKILLS_DIR", tmp_path / "skills"),
+        ):
+            (tmp_path / "skills").mkdir(exist_ok=True)
+            menu, _ = telegram_menu_commands(max_commands=100)
+
+        menu_names = {n for n, _ in menu}
+        # The valid skill should be present, the empty one should not
+        assert "valid_skill" in menu_names
+        # No empty string in menu names
+        assert "" not in menu_names
+
+
+# ---------------------------------------------------------------------------
+# Backward-compat aliases
+# ---------------------------------------------------------------------------
+
+class TestBackwardCompatAliases:
+    """The renamed constants/functions still exist under the old names."""
+
+    def test_tg_name_limit_alias(self):
+        assert _TG_NAME_LIMIT == _CMD_NAME_LIMIT == 32
+
+    def test_clamp_telegram_names_is_clamp_command_names(self):
+        assert _clamp_telegram_names is _clamp_command_names
+
+
+# ---------------------------------------------------------------------------
+# Discord skill command registration
+# ---------------------------------------------------------------------------
+
+class TestDiscordSkillCommands:
+    """Tests for discord_skill_commands() â€” centralized skill registration."""
+
+
+    @pytest.mark.windows_only
+    def test_native_windows_paths_include_local_and_external_skills(
+        self, tmp_path, monkeypatch,
+    ):
+        """Backslash-native skill paths remain visible in the flat collector."""
+        from unittest.mock import patch
+
+        local_dir = tmp_path / "skills"
+        external_dir = tmp_path / "external-skills"
+        lookalike_dir = tmp_path / "external-skills-backup"
+        local_dir.mkdir()
+        external_dir.mkdir()
+        lookalike_dir.mkdir()
+        fake_cmds = {
+            "/local-skill": {
+                "name": "local-skill",
+                "description": "Local",
+                "skill_md_path": str(local_dir / "local-skill" / "SKILL.md"),
+            },
+            "/external-skill": {
+                "name": "external-skill",
+                "description": "External",
+                "skill_md_path": str(external_dir / "external-skill" / "SKILL.md"),
+            },
+            "/lookalike-skill": {
+                "name": "lookalike-skill",
+                "description": "Outside the configured external root",
+                "skill_md_path": str(
+                    lookalike_dir / "lookalike-skill" / "SKILL.md"
+                ),
+            },
+            "/hub-skill": {
+                "name": "hub-skill",
+                "description": "Installed by the hub",
+                "skill_md_path": str(
+                    local_dir / ".hub" / "hub-skill" / "SKILL.md"
+                ),
+            },
+            "/hub-backup-skill": {
+                "name": "hub-backup-skill",
+                "description": "A normal local skill",
+                "skill_md_path": str(
+                    local_dir / ".hub-backup" / "hub-backup-skill" / "SKILL.md"
+                ),
+            },
+            "/hub-other-skill": {
+                "name": "hub-other-skill",
+                "description": "Another normal local skill",
+                "skill_md_path": str(
+                    local_dir / ".hub-other" / "hub-other-skill" / "SKILL.md"
+                ),
+            },
+        }
+
+        assert "\\" in str(local_dir.resolve())
+        monkeypatch.setenv("HERMES_HOME", str(tmp_path))
+        with (
+            patch("agent.skill_commands.get_skill_commands", return_value=fake_cmds),
+            patch("tools.skills_tool.SKILLS_DIR", local_dir),
+            patch(
+                "agent.skill_utils.get_external_skills_dirs",
+                return_value=[external_dir],
+            ),
+        ):
+            entries, hidden = discord_skill_commands(
+                max_slots=50, reserved_names=set(),
+            )
+
+        assert {name for name, _desc, _key in entries} == {
+            "external-skill",
+            "hub-backup-skill",
+            "hub-other-skill",
+            "local-skill",
+        }
+        assert hidden == 0
+
+    def test_names_allow_hyphens(self, tmp_path, monkeypatch):
+        """Discord names should keep hyphens (unlike Telegram's _ sanitization)."""
+        from unittest.mock import patch
+
+        fake_skills_dir = str(tmp_path / "skills")
+        fake_cmds = {
+            "/my-cool-skill": {
+                "name": "my-cool-skill",
+                "description": "A cool skill",
+                "skill_md_path": f"{fake_skills_dir}/my-cool-skill/SKILL.md",
+                "skill_dir": f"{fake_skills_dir}/my-cool-skill",
+            },
+        }
+        monkeypatch.setenv("HERMES_HOME", str(tmp_path))
+        (tmp_path / "skills").mkdir(exist_ok=True)
+        with (
+            patch("agent.skill_commands.get_skill_commands", return_value=fake_cmds),
+            patch("tools.skills_tool.SKILLS_DIR", tmp_path / "skills"),
+        ):
+            entries, _ = discord_skill_commands(
+                max_slots=50, reserved_names=set(),
+            )
+
+        assert entries[0][0] == "my-cool-skill"  # hyphens preserved
+
+    def test_cap_enforcement(self, tmp_path, monkeypatch):
+        """Entries beyond max_slots should be hidden."""
+        from unittest.mock import patch
+
+        fake_skills_dir = str(tmp_path / "skills")
+        fake_cmds = {
+            f"/skill-{i:03d}": {
+                "name": f"skill-{i:03d}",
+                "description": f"Skill {i}",
+                "skill_md_path": f"{fake_skills_dir}/skill-{i:03d}/SKILL.md",
+                "skill_dir": f"{fake_skills_dir}/skill-{i:03d}",
+            }
+            for i in range(20)
+        }
+        monkeypatch.setenv("HERMES_HOME", str(tmp_path))
+        (tmp_path / "skills").mkdir(exist_ok=True)
+        with (
+            patch("agent.skill_commands.get_skill_commands", return_value=fake_cmds),
+            patch("tools.skills_tool.SKILLS_DIR", tmp_path / "skills"),
+        ):
+            entries, hidden = discord_skill_commands(
+                max_slots=5, reserved_names=set(),
+            )
+
+        assert len(entries) == 5
+        assert hidden == 15
+
+
+
+
+
+
+# ---------------------------------------------------------------------------
+# Discord skill commands grouped by category
+# ---------------------------------------------------------------------------
+
+from hermes_cli.commands import discord_skill_commands_by_category  # noqa: E402
+
+
+class TestDiscordSkillCommandsByCategory:
+    """Tests for discord_skill_commands_by_category() â€” /skill group registration."""
+
+
+
+
+    def test_no_legacy_25x25_cap(self, tmp_path, monkeypatch):
+        """The old nested-layout caps (25 groups Ã— 25 skills/group) are gone.
+
+        The live caller flattens categories into a single autocomplete list,
+        which Discord fetches dynamically â€” the per-command 8KB payload
+        concern from the old nested layout (#11321, #10259) no longer applies.
+        Guards against accidentally re-introducing the caps, which would
+        silently drop skills in the 26th+ alphabetical category (the exact
+        failure mode users were hitting with 29 category dirs on real
+        installs).
+        """
+        from unittest.mock import patch
+
+        fake_skills_dir = str(tmp_path / "skills")
+
+        # Build 30 categories (> old _MAX_GROUPS=25) each with 30 skills
+        # (> old _MAX_PER_GROUP=25).
+        fake_cmds = {}
+        for c in range(30):
+            cat = f"cat{c:02d}"  # cat00, cat01, ..., cat29 â€” 30 categories
+            for s in range(30):
+                name = f"skill-{c:02d}-{s:02d}"
+                skill_subdir = tmp_path / "skills" / cat / name
+                skill_subdir.mkdir(parents=True, exist_ok=True)
+                (skill_subdir / "SKILL.md").write_text("---\nname: x\n---\n")
+                fake_cmds[f"/{name}"] = {
+                    "name": name,
+                    "description": f"Category {cat} skill {s}",
+                    "skill_md_path": f"{fake_skills_dir}/{cat}/{name}/SKILL.md",
+                }
+
+        monkeypatch.setenv("HERMES_HOME", str(tmp_path))
+        with (
+            patch("agent.skill_commands.get_skill_commands", return_value=fake_cmds),
+            patch("tools.skills_tool.SKILLS_DIR", tmp_path / "skills"),
+        ):
+            categories, uncategorized, hidden = discord_skill_commands_by_category(
+                reserved_names=set(),
+            )
+
+        # Every category should be present â€” no 25-group cap
+        assert len(categories) == 30, (
+            f"expected all 30 categories, got {len(categories)} "
+            f"(cap from old nested layout must be removed)"
+        )
+        # Every skill in every category must be present â€” no 25-per-group cap
+        for cat_name, entries in categories.items():
+            assert len(entries) == 30, (
+                f"category {cat_name}: expected 30 skills, got {len(entries)} "
+                f"(cap from old nested layout must be removed)"
+            )
+        # Nothing should be reported hidden for the cap reason (the only
+        # legitimate hidden reason now is name clamp collisions, which
+        # don't happen here since all names are unique).
+        assert hidden == 0
+
+    def test_external_dirs_skills_included(self, tmp_path, monkeypatch):
+        """Skills in ``skills.external_dirs`` must appear in /skill autocomplete.
+
+        #18741 fixed this for the flat ``discord_skill_commands`` collector
+        but left ``discord_skill_commands_by_category`` (the live caller for
+        Discord's ``/skill`` command) still filtering by
+        ``SKILLS_DIR`` prefix only. Regression guard that both collectors
+        now accept external-dir skills.
+        """
+        from unittest.mock import patch
+
+        local_skills_dir = tmp_path / "local-skills"
+        external_dir = tmp_path / "external-skills"
+
+        (local_skills_dir / "creative" / "local-skill").mkdir(parents=True)
+        (local_skills_dir / "creative" / "local-skill" / "SKILL.md").write_text("")
+
+        (external_dir / "mlops" / "external-skill").mkdir(parents=True)
+        (external_dir / "mlops" / "external-skill" / "SKILL.md").write_text("")
+
+        fake_cmds = {
+            "/local-skill": {
+                "name": "local-skill",
+                "description": "Local",
+                "skill_md_path": str(local_skills_dir / "creative" / "local-skill" / "SKILL.md"),
+            },
+            "/external-skill": {
+                "name": "external-skill",
+                "description": "External",
+                "skill_md_path": str(external_dir / "mlops" / "external-skill" / "SKILL.md"),
+            },
+        }
+        monkeypatch.setenv("HERMES_HOME", str(tmp_path))
+        with (
+            patch("agent.skill_commands.get_skill_commands", return_value=fake_cmds),
+            patch("tools.skills_tool.SKILLS_DIR", local_skills_dir),
+            patch(
+                "agent.skill_utils.get_external_skills_dirs",
+                return_value=[external_dir],
+            ),
+        ):
+            categories, uncategorized, hidden = discord_skill_commands_by_category(
+                reserved_names=set(),
+            )
+
+        # Local skill â†’ grouped under "creative"
+        assert "creative" in categories
+        assert any(n == "local-skill" for n, _d, _k in categories["creative"])
+        # External skill â†’ grouped under its own top-level dir "mlops"
+        assert "mlops" in categories, (
+            "external-dir skills must be included â€” the old SKILLS_DIR-only "
+            "prefix check was broken for by_category (completes #18741)"
+        )
+        assert any(n == "external-skill" for n, _d, _k in categories["mlops"])
+        assert uncategorized == []
+        assert hidden == 0
+
+    def test_hub_exclusion_is_path_component_aware(self, tmp_path, monkeypatch):
+        """Discord categories exclude .hub, not similarly named siblings."""
+        from unittest.mock import patch
+
+        local_dir = tmp_path / "skills"
+        fake_cmds = {
+            "/hub-skill": {
+                "name": "hub-skill",
+                "description": "Installed by the hub",
+                "skill_md_path": str(local_dir / ".hub" / "hub-skill" / "SKILL.md"),
+            },
+            "/hub-backup-skill": {
+                "name": "hub-backup-skill",
+                "description": "A normal local skill",
+                "skill_md_path": str(local_dir / ".hub-backup" / "hub-backup-skill" / "SKILL.md"),
+            },
+            "/hub-other-skill": {
+                "name": "hub-other-skill",
+                "description": "Another normal local skill",
+                "skill_md_path": str(local_dir / ".hub-other" / "hub-other-skill" / "SKILL.md"),
+            },
+        }
+
+        monkeypatch.setenv("HERMES_HOME", str(tmp_path))
+        with (
+            patch("agent.skill_commands.get_skill_commands", return_value=fake_cmds),
+            patch("tools.skills_tool.SKILLS_DIR", local_dir),
+            patch("agent.skill_utils.get_external_skills_dirs", return_value=[]),
+        ):
+            categories, uncategorized, hidden = discord_skill_commands_by_category(
+                reserved_names=set(),
+            )
+
+        assert ".hub" not in categories
+        assert any(name == "hub-backup-skill" for name, _desc, _key in categories[".hub-backup"])
+        assert any(name == "hub-other-skill" for name, _desc, _key in categories[".hub-other"])
+        assert uncategorized == []
+        assert hidden == 0
+
+
+# ---------------------------------------------------------------------------
+# Plugin slash command integration
+# ---------------------------------------------------------------------------
+
+class TestPluginCommandEnumeration:
+    """Plugin commands registered via ctx.register_command() must be surfaced
+    by every gateway enumerator (Telegram menu, Slack subcommand map, etc.).
+    """
+
+    def _patch_plugin_commands(self, monkeypatch, commands):
+        """Monkeypatch hermes_cli.plugins.get_plugin_commands() to a fixed dict."""
+        from hermes_cli import plugins as _plugins_mod
+
+        monkeypatch.setattr(
+            _plugins_mod, "get_plugin_commands", lambda: dict(commands)
+        )
+
+
+
+    def test_plugin_command_with_hyphens_sanitized_for_telegram(self, monkeypatch):
+        """Plugin names containing hyphens must be underscore-normalized for Telegram."""
+        self._patch_plugin_commands(monkeypatch, {
+            "my-plugin-cmd": {
+                "handler": lambda _a: "ok",
+                "description": "desc",
+                "args_hint": "",
+                "plugin": "p",
+            }
+        })
+        names = {name for name, _desc in telegram_bot_commands()}
+        assert "my_plugin_cmd" in names
+        assert "my-plugin-cmd" not in names
+
+
+
+    def test_plugin_enumerator_handles_missing_plugin_manager(self, monkeypatch):
+        """Enumerators must never raise when plugin discovery raises."""
+        from hermes_cli import plugins as _plugins_mod
+
+        def _boom():
+            raise RuntimeError("plugin system down")
+
+        monkeypatch.setattr(_plugins_mod, "get_plugin_commands", _boom)
+
+        # Both calls should succeed and just return the built-in set.
+        tg_names = {name for name, _desc in telegram_bot_commands()}
+        slack_names = set(slack_subcommand_map())
+        assert "status" in tg_names
+        assert "status" in slack_names
