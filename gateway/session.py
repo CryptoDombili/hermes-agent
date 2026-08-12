@@ -3535,8 +3535,7 @@ class SessionStore:
                 from hermes_state import CompressionSessionClosedError
 
                 if isinstance(exc, CompressionSessionClosedError):
-                    child = self._db.find_live_compression_child(session_id)
-                    child_id = str(child["id"]) if child and child.get("id") else ""
+                    child_id = self._find_live_compression_child_id(session_id)
                     if child_id:
                         try:
                             self._append_transcript_message(child_id, msg)
@@ -3632,6 +3631,11 @@ class SessionStore:
                     return
                 continue
 
+    def _find_live_compression_child_id(self, session_id: str) -> str:
+        """Return the unique live compression continuation, or an empty id."""
+        child = self._db.find_live_compression_child(session_id)
+        return str(child["id"]) if child and child.get("id") else ""
+
     def _drain_spooled_drops(self, session_id: str) -> bool:
         """Replay cap-dropped messages before the newer in-memory queue.
 
@@ -3644,12 +3648,20 @@ class SessionStore:
             return True
         try:
             from gateway.shutdown_flush import drain_transcript_spool
+            from hermes_state import CompressionSessionClosedError
+
+            def replay(message: Dict[str, Any]) -> None:
+                try:
+                    self._append_transcript_message(session_id, message)
+                except CompressionSessionClosedError:
+                    child_id = self._find_live_compression_child_id(session_id)
+                    if not child_id:
+                        raise
+                    self._append_transcript_message(child_id, message)
 
             _replayed, remaining = drain_transcript_spool(
                 session_id,
-                lambda message: self._append_transcript_message(
-                    session_id, message
-                ),
+                replay,
             )
             if remaining is None:
                 return False

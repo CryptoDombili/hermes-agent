@@ -9,6 +9,7 @@ successful transcript flush — not silently discarded (#78182, #82616).
 import json
 import logging
 import threading
+from types import SimpleNamespace
 
 import pytest
 
@@ -358,6 +359,67 @@ class TestSpoolOnDrop:
             "finish",
         ]
         assert _spool_files(spool_home) == []
+
+    def test_compression_closed_parent_reroutes_spool_before_live_queue(
+        self, spool_home, monkeypatch
+    ):
+        """A closed parent must not strand its ordered recovery backlog."""
+        monkeypatch.setattr(SessionStore, "_MAX_PENDING_PER_SESSION", 2)
+        db = SessionDB(db_path=spool_home / "state.db")
+        db.create_session("parent", source="telegram")
+
+        class BrokenProxy:
+            def __init__(self, wrapped):
+                self.wrapped = wrapped
+                self.broken = True
+
+            def append_message(self, **kwargs):
+                if self.broken:
+                    raise RuntimeError("controlled database outage")
+                return self.wrapped.append_message(**kwargs)
+
+            def __getattr__(self, name):
+                return getattr(self.wrapped, name)
+
+        proxy = BrokenProxy(db)
+        store = _make_store(proxy)
+        store._lock = threading.RLock()
+        store._entries = {"route": SimpleNamespace(session_id="parent")}
+        store._loaded = True
+        store._save = lambda: None
+        store._transcript_reroutes = {}
+
+        for i in range(3):
+            store.append_to_transcript(
+                "parent", {"role": "user", "content": f"m{i}"}
+            )
+
+        assert len(_spool_files(spool_home)) == 1
+        assert [
+            message["content"]
+            for message in store._dirty_transcripts["parent"]
+        ] == ["m1", "m2"]
+
+        db.end_session("parent", "compression")
+        db.create_session("child", source="telegram", parent_session_id="parent")
+        db.replace_messages("child", [{"role": "user", "content": "summary"}])
+        assert db.find_live_compression_child("parent")["id"] == "child"
+
+        proxy.broken = False
+        store.append_to_transcript(
+            "parent", {"role": "assistant", "content": "newer"}
+        )
+
+        assert store._entries["route"].session_id == "child"
+        assert "parent" not in store._dirty_transcripts
+        assert _spool_files(spool_home) == []
+        assert [
+            message["content"]
+            for message in db.get_messages_as_conversation(
+                "child", repair_alternation=False
+            )
+        ] == ["summary", "m0", "m1", "m2", "newer"]
+        db.close()
 
 
 class TestSpoolPrimitives:
